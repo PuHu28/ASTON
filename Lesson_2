@@ -64,3 +64,89 @@ public class TwoNumbersSum {
         return sum >= 10 && sum <= 20;
     }
 }
+
+// Task 2.6
+
+public class NumberCheck {
+    public static void main (String[] args) {
+        int a = -2;
+        if (a >= 0){
+            System.out.println("Число положительное");
+        } else {
+            System.out.println("Число отрицательное");
+        }
+    }
+}
+
+// Task 2.7
+
+public class PosNegNumber {
+    public static void main (String[] args) {
+        int a = -2;
+        System.out.println(negativeCheck(a));
+    }
+
+    public static boolean negativeCheck(int number) {
+        if (number < 0){
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+
+// Task 2.8
+
+public class ArgumentCombination {
+    public static void main (String[] args) {
+        int number = 4;
+        String str = "Новая строка";
+        printPhrase(str, number);
+    }
+
+    public static void printPhrase(String phrase, int times){
+        for (int a = 1; a <= times; a++) {
+            System.out.println(phrase);
+        }
+    }
+}
+
+// Task 2.9
+
+public class BissextileYear {
+    public static void main (String[] args) {
+        int year = 1200;
+        System.out.println(leapYear(year));
+    }
+
+    public static boolean leapYear(int year){
+        if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+
+// Task 2.10
+
+import java.util.Arrays;
+
+public class ArrayChanges {
+    public static void main (String[] args) {
+        int[] arr = {1, 1, 0, 0, 1, 0, 1, 1, 0, 0};
+        System.out.println("Исходник : " + Arrays.toString(arr));
+
+        for (int a = 0; a < arr.length; a++) {
+            if (arr[a] == 0){
+                arr[a] = 1;
+            } else if (arr[a] == 1) {
+                arr[a] = 0;
+            }
+        }
+        System.out.println("Изменен на : " + Arrays.toString(arr));
+    }
+}
+
+// Task 2.11
+
