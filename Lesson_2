@@ -150,3 +150,80 @@ public class ArrayChanges {
 
 // Task 2.11
 
+import java.util.Arrays;
+
+public class EmptyMassive {
+    public static void main(String[] args) {
+        int[] arr = new int[100];
+
+        for (int a = 0; a < arr.length; a++) {
+            arr[a] = a + 1;
+        }
+
+        System.out.println("Массив: " + Arrays.toString(arr));
+    }
+}
+
+// Task 2.12
+
+import java.util.Arrays;
+
+public class MultiplyMassive {
+    public static void main(String[] args) {
+        int[] array = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
+
+        System.out.println("Исходный массив: " + Arrays.toString(array));
+
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] < 6) {
+                array[i] *= 2;
+            }
+        }
+
+        System.out.println("Массив с умножением на 2 чисел меньше 6: " + Arrays.toString(array));
+    }
+}
+
+// Task 2.13
+
+public class SquareMassive {
+    public static void main(String[] args) {
+        int n = 5;
+        int[][] array = new int[n][n];
+
+        for (int i = 0; i < n; i++) {
+            array[i][i] = 1;
+        }
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print(array[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+// Task 2.14
+
+public class InitMassive {
+
+    public static void main(String[] args) {
+        int len = 5;
+        int initialValue = 6;
+        int[] resultArray = createArray(len, initialValue);
+
+        for (int element : resultArray) {
+            System.out.print(element + " ");
+        }
+    }
+
+    public static int[] createArray(int len, int initialValue) {
+        int[] array = new int[len];
+
+        for (int i = 0; i < len; i++) {
+            array[i] = initialValue;
+        }
+        return array;
+    }
+}
